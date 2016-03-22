@@ -25,7 +25,6 @@ function existingMsg(eMsg) {
     let toDom = document.getElementById("messageBox");
     for (let i = 0; i < eMsg.length; i++) {
     string += `<div>${eMsg[i].msg}</div>`;
-    console.log(eMsg[i].msg);
     }
     toDom.innerHTML = string;
 }
