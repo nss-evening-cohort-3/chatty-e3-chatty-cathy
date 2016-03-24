@@ -32,7 +32,7 @@ function existingMsg(eMsg) {
     }
     toDom.innerHTML = string;
 }
-
+// Hide these functions. 
 // This function attaches event listeners to our delete buttons that remove only the message 
 // associated with it using event bubbling. 
 document.querySelector("body").addEventListener("click", function(event) {
