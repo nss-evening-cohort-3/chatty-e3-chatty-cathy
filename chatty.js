@@ -14,7 +14,7 @@ let Chatty = (function () {
         // Set the value of the private array
         // this parse command is turning the JSON into js
           messages = JSON.parse(this.responseText).messages;
-          callBack(messages);
+          return callBack(messages);
       });
     },
   }
