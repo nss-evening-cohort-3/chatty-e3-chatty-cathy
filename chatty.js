@@ -41,6 +41,20 @@ document.querySelector("body").addEventListener("click", function(event) {
   }
 });
 
+// This is the code for our clear button which has two requirements associated with it: 
+// 1) upon click, it empties the message-box container. 2) If there are no messages in that container, 
+// it should be disabled. 
+document.getElementById("clear").addEventListener("click", function () {
+    document.getElementById("messageBox").innerHTML = "";
+    clearCheck();
+});
+
+function clearCheck() {
+  if (document.getElementById("messageBox").innerHTML === "") {
+    document.getElementById("clear").setAttribute("disabled", true);
+  }
+};
+
 Chatty.loadMessages(existingMsg);
 
 
