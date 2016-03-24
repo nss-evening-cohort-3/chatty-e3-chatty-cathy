@@ -16,19 +16,8 @@ let Chatty = (function () {
           messages = JSON.parse(this.responseText).messages;
           return callBack(messages);
       });
-    },
-    makeArray: function(callBack) {
-      let message = document.getElementsByClassName('msg');
-        for (let i = 0; i < message.length; i++) {
-          let current = message[i];
-          messages.push(current.innerText);
-          console.log(messages)
-        };
-    },
-    getMessages: function(callBack) {
-      return messages;
-    }
-  };
+     }
+   } 
  }());   
 
 // This function takes our existing messages from the JSON and pushes to the DOM.
@@ -68,7 +57,6 @@ function clearCheck() {
 };
 
 Chatty.loadMessages(existingMsg);
-Chatty.makeArray()
 
 
 
