@@ -17,7 +17,18 @@ let Chatty = (function () {
           return callBack(messages);
       });
     },
-  }
+    makeArray: function(callBack) {
+      let message = document.getElementsByClassName('msg');
+        for (let i = 0; i < message.length; i++) {
+          let current = message[i];
+          messages.push(current.innerText);
+          console.log(messages)
+        };
+    },
+    getMessages: function(callBack) {
+      return messages;
+    }
+  };
  }());   
 
 // This function takes our existing messages from the JSON and pushes to the DOM.
@@ -31,6 +42,7 @@ function existingMsg(eMsg) {
       string += "</span> delete me!</button></div>";
     }
     toDom.innerHTML = string;
+
 }
 
 // This function attaches event listeners to our delete buttons that remove only the message 
@@ -56,7 +68,7 @@ function clearCheck() {
 };
 
 Chatty.loadMessages(existingMsg);
-
+Chatty.makeArray()
 
 
 
