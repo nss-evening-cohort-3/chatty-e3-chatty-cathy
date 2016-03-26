@@ -21,9 +21,15 @@ document.getElementById("clear").addEventListener("click", function () {
 });
 
 function clearCheck() {
-  if (document.getElementById("messageBox").innerHTML === "") {
+    let clearbtn = document.getElementById('clear');
+    var msgbox = document.getElementById('messageBox');
+    console.log(msgbox)
+    console.log(clearbtn.attributes)
+    if (msgbox.innerHTML === "") {
     document.getElementById("clear").setAttribute("disabled", true);
-  }
+        } else if (msgbox.children.length > 0) { 
+    clearbtn.removeAttribute('disabled', true);
+    }
 };
 
 Chatty.loadMessages(addDeleteBtns);
