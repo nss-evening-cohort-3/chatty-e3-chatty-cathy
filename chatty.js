@@ -14,52 +14,8 @@ let Chatty = (function () {
         // Set the value of the private array
         // this parse command is turning the JSON into js
           messages = JSON.parse(this.responseText).messages;
-          return callBack(messages);
+          callBack(messages);
       });
-     }
-   } 
- }());   
-
-// This function takes our existing messages from the JSON and pushes to the DOM.
-function existingMsg(eMsg) {
-    let string = "";
-    let toDom = document.getElementById("messageBox");
-    for (let i = 0; i < eMsg.length; i++) {
-      string += `<div class="msg">${eMsg[i].msg}`;
-      string += "<button type='button' class='btn btn-default btn-xs delete'>";
-      string += "<span class='glyphicon glyphicon-trash' aria-hidden='true'>";
-      string += "</span> delete me!</button></div>";
     }
-    toDom.innerHTML = string;
-
-}
-// Hide these functions. 
-// This function attaches event listeners to our delete buttons that remove only the message 
-// associated with it using event bubbling. 
-document.querySelector("body").addEventListener("click", function(event) {
-  if (event.target.className === "btn btn-default btn-xs delete") {
-    event.target.parentNode.parentNode.removeChild(event.target.parentNode);
   }
-});
-
-// This is the code for our clear button which has two requirements associated with it: 
-// 1) upon click, it empties the message-box container. 2) If there are no messages in that container, 
-// it should be disabled. 
-document.getElementById("clear").addEventListener("click", function () {
-    document.getElementById("messageBox").innerHTML = "";
-    clearCheck();
-});
-
-function clearCheck() {
-  if (document.getElementById("messageBox").innerHTML === "") {
-    document.getElementById("clear").setAttribute("disabled", true);
-  }
-};
-
-Chatty.loadMessages(existingMsg);
-
-
-
-
-
-
+ }());   
