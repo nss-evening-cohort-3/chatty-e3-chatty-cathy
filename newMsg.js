@@ -23,8 +23,23 @@ function addMsg (eMsg) {
        if (event.keyCode === 13) {
         eMsg.push("<div class='msg'>"+ event.target.value +"<button type='button' class='btn btn-default btn-xs delete'><span class='glyphicon glyphicon-trash' aria-hidden='true'></span> delete me!</button></div>");
         document.getElementById("messageBox").innerHTML += eMsg[eMsg.length-1];
+        clearCheck();
         }
     });
 };
+
+let buttonDark = document.getElementById("dark"); 
+let buttonLarge = document.getElementById("large"); 
+let msgBox = document.getElementById("messageBox"); 
+
+// // let buttonLarge = document.getElementById("large");
+
+buttonDark.addEventListener("click", function() {
+  msgBox.classList.toggle("dark");
+});
+
+buttonLarge.addEventListener("click", function() {
+  msgBox.classList.toggle("large"); 
+}); 
 
 Chatty.loadMessages(existingMsg);
