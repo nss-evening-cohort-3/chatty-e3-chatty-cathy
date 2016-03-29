@@ -27,8 +27,8 @@ body {
   border: 3px solid hotpink;
 }
 #messageBox {
-  margin-top: 10%;
-  padding-top: 7.5%;
+  margin-top: 0%;
+  padding-top: 0%;
   max-height: 700px;
   overflow: auto;
   border: 1px solid black;
@@ -58,7 +58,7 @@ footer {
 
 /*buttons large and dark*/
 .dark {
-  color: white;
+  color: purple;
   background-color: darkgrey;
 }
 

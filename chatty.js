@@ -2,7 +2,7 @@
 
 // loads the JSON file
 // contains the XHR call
-let Chatty = (function () {
+var Chatty = (function () {
   let messages = [];
   // the loadCathyquotes is a different request to OPEN and SEND; after send we call that the same way we do functions with ()
   return {
@@ -19,4 +19,3 @@ let Chatty = (function () {
     }
   }
  }());   
-
