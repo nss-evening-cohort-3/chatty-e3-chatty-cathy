@@ -2,33 +2,28 @@ body {
   padding-top: 5%;
   margin: 0 auto;
   width: 960px;
-  /*padding-bottom: 70px;*/
 }
+
 .navbar {
   background-color: lightgray;
-
-  margin: 0 auto;
 }
+
 #clear{
   margin-top: 2.4%;
 }
-.theme{
-  margin-top: 2.4%;
-}
+
 .logo {
   width: 20%;
   height: auto;
 }
+
 #ack{
   width: 300px;
 }
-#clearBoard {
-  background-color: hotpink;
-  border: 3px solid hotpink;
-}
+
 #messageBox {
-  margin-top: 10%;
-  padding-top: 7.5%;
+  margin-top: 0%;
+  padding-top: 0%;
   max-height: 700px;
   overflow: auto;
   border: 1px solid black;
@@ -51,14 +46,13 @@ body {
 }
 
 footer {
-  margin-top: 80%;
-  padding-top: 5%;
+  margin-top: 2%;
   border-top: 2px solid lightgray;
 }
 
 /*buttons large and dark*/
 .dark {
-  color: white;
+  color: purple;
   background-color: darkgrey;
 }
 
