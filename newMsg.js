@@ -1,12 +1,6 @@
 "use strict"
-// Another IIFE should accept an element id and the user message and then add the user's 
-// message - along with the delete button - to the specificed parent element. 
-// Each message should be stored in a private array in this IIFE. 
-// This IIFE should expose a function to read all messages and delete a single message
 
-// This function takes our existing messages from the JSON and pushes to the DOM.
 var Chatty = (function(originalChatty) {
-  // use strict does like let working with IIFEs.
   originalChatty.existingMsg = function(eMsg) {
     let string = "";
     let toDom = document.getElementById("messageBox");
@@ -29,5 +23,4 @@ var Chatty = (function(originalChatty) {
   }
   return originalChatty;
 })(Chatty); 
-
 Chatty.loadMessages(Chatty.existingMsg);

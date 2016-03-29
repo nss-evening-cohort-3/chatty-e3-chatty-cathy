@@ -1,7 +1,5 @@
-// Another IIFE should accept a message element id and then remove the correct element from the DOM. 
-// This IIFE shold also remove the correspondng message from the private array that was created in the previous IIFE.
-// This function attaches event listeners to our delete buttons that remove only the message 
-// associated with it using event bubbling. 
+"use strict"
+
 var Chatty = (function(originalChatty) { 
     originalChatty.addDeleteBtns = function() {
         originalChatty.clearBtn();    
@@ -25,5 +23,4 @@ var Chatty = (function(originalChatty) {
     }
     return originalChatty;
 })(Chatty);
-
 Chatty.loadMessages(Chatty.addDeleteBtns);
